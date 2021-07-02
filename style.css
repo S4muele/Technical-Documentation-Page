@@ -1,0 +1,167 @@
+/* general sizing and positioning */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0;
+  display: flex;
+  align-items: flex-start;
+  font-family: Roboto;
+  font-size: 1rem;
+  width: 100%;
+}
+
+
+#sticky-container {
+  width: 20%;
+  position: sticky; 
+  top: 0px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+main {
+  border-left: 1px solid coral;
+  width: 80%;
+  scroll-snap-type: y mandatory;
+}
+
+.main-section {
+    padding: 0 1rem;
+    
+}
+
+@media (max-width: 720px) {
+  
+  body {
+  position: relative;
+  display: block;
+  font-family: Roboto;
+  font-size: 1rem;
+  }
+  
+  #sticky-container {
+  width: 100%;
+  background-color: white;
+  position: static; 
+  text-align: center;
+  z-index: 1;
+
+  }
+  
+  main {
+  border: 0;
+  width: 100%;
+  padding-left: 0;
+  
+  }
+  
+}
+/*=============STYLES=================*/
+
+#title {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 1.5rem; font-weight: bold;
+}
+
+nav ul {
+  list-style: none;  
+  padding: 0;
+}
+
+nav li {
+  border-top: 1px solid coral;
+  padding: 0.7em 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4d4e53;
+  font-size: 1.1em
+}
+
+@media (max-width: 720px) {
+  
+  nav {
+    line-height: 2rem;
+  }
+  
+  nav ul {
+    margin: 0.5rem;
+  }
+
+  nav li {
+    display: inline-block;
+    border-top: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: black;
+    border: 1px solid coral;
+    border-radius: 5px;
+    padding: 0.2em; 
+    background-color: hsl(0, 0%, 90%);
+  }
+}
+
+main header {
+  margin-top: 1.5em;
+  font-size: 1.5rem; font-weight: bold;
+}
+
+#introduction {
+  margin-top: 1em;
+}
+main li {
+  line-height: 1.5em;
+}
+p code {
+  display: inline-block;
+  border: 1px solid coral;
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 2px;
+  padding: 0 0.1em 0.15em 0.1em;
+  position: relative;
+  bottom: 0.1em;
+}
+main ul {
+  margin-left: 1rem;
+}
+.code-container {
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid coral;
+  border-radius: 7px;
+  font-family: monospace;
+  font-size: 1.2em;
+  line-height: 1em;
+  padding: 0.2em 1em;
+  margin: 0 1rem;
+}
+
+.code-indent {
+  padding: 0 1em;
+}
+
+
+
+/*
+
+-I should find a way to make web browsers (Chrome, Safari) don't cover the #Reference element at the end of the page with their menu bars.
+
+  **SOLVED**
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+ 
+
+/*
+
+-The mobile version could use a sticky navbar at the top of the page, but if add one, whenever I click a navbar link to navigate to its related section within the page, the title of that section gets covered by the sticky navbar itself. 
+
+  --One solution is using the scroll-padding-top CSS property but it doesn't work on my iphone--
+
+*/

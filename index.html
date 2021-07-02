@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Technical Documentation Page</title>
+  <!--This tags are to show the thumbnail on LinkedIn -->
+  <meta property="og:title" content="Technical Documentation Page" />
+  <meta property="og:description" content="My most responsive layout so far. Made as part of the 'Responsive Web Design Certification' on freecodecamp.org." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/link-thumbnail.png" />
+  <meta property="og:url" content="https://s4muele.github.io/Technical-Documentation-Page/" />
+
+  <!-- -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+
+<!--GOOGLE FONTS-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!------------------------------------------------------------------>
+<header id="sticky-container">
+   <nav id="navbar"> 
+     <header id="title">CSS Flexbox</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#display:_flex">display: flex</a></li>
+        <li><a class="nav-link" href="#flex-direction">flex-direction</a></li>
+        <li><a class="nav-link" href="#justify-content">justify-content</a></li>
+        <li><a class="nav-link" href="#align-items">align-items</a></li>
+        <li><a class="nav-link" href="#flex-wrap">flex-wrap</a></li>
+        <li><a class="nav-link" href="#flex-shrink">flex-shrink</a></li>
+        <li><a class="nav-link" href="#flex-grow">flex-grow</a></li>
+        <li><a class="nav-link" href="#flex-basis">flex-basis</a></li>
+        <li><a class="nav-link" href="#flex-order">flex-order</a></li>
+        <li><a class="nav-link" href="#align-self">align-self</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+      </ul>
+  </nav>
+</header>
+<main id="main-doc">
+  
+  <section class="main-section" id="introduction">
+    <header>Introduction</header>
+            <p>Before the Flexbox Layout module, there were four layout modes:</p>
+            <ul>
+              <li style="display:none"></li> 
+              <li>Block, for sections in a webpage</li>
+              <li>Inline, for text</li>
+              <li>Table, for two-dimensional table data</li>
+              <li>Positioned, for explicit position of an element</li>
+            </ul>
+            <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+  </section>
+  
+  <section class="main-section" id="display:_flex">
+    <header>display: flex</header>
+            <p>Placing the CSS property <code>display: flex</code> on an element allows you to use other flex properties to build a responsive page.</p>
+            <div class="code-container">
+              <p>.container {</p>
+              <div class="code-indent">
+                <p>display: flex;</p>
+              </div>
+              <p>}</p>
+            </div>
+  </section>
+  
+       <section class="main-section" id="flex-direction">
+    <header>flex-direction</header>
+            <p>The <code>flex-direction</code> property specifies the direction of the flexible items.</p>
+            <p>This example sets the direction of the flexible items inside the <code>&lt;div&gt;</code> element in reverse order:</p>
+            <div class="code-container">
+              <p>div {</p>
+              <div class="code-indent">
+                <p>display: flex;<p/>
+                <p>flex-direction: row-reverse;</p>
+              </div>
+              <p>}</p>
+            </div>
+            <p><strong>Note:</strong> If the element is not a flexible item, the <code>flex-direction</code> property has no effect.
+    </section>
+  
+  <section class="main-section" id="justify-content">
+    <header>justify-content</header>
+            <p>The <code>justify-content</code> property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).</p>
+            <p>This example aligns the flex items at the center of the container:</p>
+            <div class="code-container">
+              <p>.container {</p>
+              <div class="code-indent">
+                <p>display: flex;</p>
+                <p>justify-content: center;</p>
+              </div>
+              <p>}</p>
+            </div>
+            <p><strong>Tip:</strong> Use the align-items property to align the items vertically.</p>
+  </section>
+  
+  <section class="main-section" id="align-items">
+    <header>align-items</header>
+            <p>The align-items property specifies the default alignment for items inside the flexible container.</p>
+            <p>This code snippet centers the alignments for all the items of the flexible <code>&lt;div&gt;</code> element:
+            <div class="code-container">
+              <p>div {</p>
+              <div class="code-indent">
+                <p>display: flex;</p>
+                <p>align-items: center;</p>
+              </div>
+              <p>}</p>
+            </div>
+            <p><strong>Tip: </strong>Use the <code>align-self</code> property of each item to override the <code>align-items</code> property.</p>
+  </section>
+  
+  <section class="main-section" id="flex-wrap">
+    <header>flex-wrap</header>
+            <p>The <code>flex-wrap</code> property specifies whether the flexible items should wrap or not.</p>
+            <p>Use this syntax to make the flexible items wrap if necessary:</p>
+            <div class="code-container">
+              <p>div {<p>
+              <div class="code-indent">
+                <p>display: flex;</p>
+                <p>flex-wrap: wrap;</p>
+                <p>}</p>
+              </div>
+            </div>
+            <p><strong>Note: </strong>If the elements are not flexible items, the <code>flex-wrap</code> property has no effect.</p>
+  </section>
+  
+  <section class="main-section" id="flex-shrink">
+    <header>flex-shrink</header>
+            <p>The <code>flex-shrink</code> property specifies how the item will shrink relative to the rest of the flexible items inside the same container.</p>
+            <p>This code snippet makes the second flex-item shrink three times more than the rest:</p>
+            <div class="code-container">
+              <p>div:nth-of-type(2) {</p>
+              <div class="code-indent">
+                <p>flex-shrink: 3;</p>
+              </div>
+              <p>}</p>
+            </div>
+            <p><strong>Tip: </strong>If the element is not a flexible item, the <code>flex-shrink</code> property has no effect.</p>
+  </section>
+  
+  <section class="main-section" id="flex-grow">
+    <header>flex-grow</header>
+            <p>The <code>flex-grow</code> property specifies how much the item will grow relative to the rest of the flexible items inside the same container.</p>
+            <p>The code in the following example lets the second flex-item grow three times wider than the rest:</p>
+            <div class="code-container">
+              <p>div:nth-of-type(1) {flex-grow: 1;}</p>
+              <p>div:nth-of-type(2) {flex-grow: 3;}</p>
+              <p>div:nth-of-type(3) {flex-grow: 1;}</p> 
+            </div>
+            <p><strong>Tip: </strong>If the element is not a flexible item, the <code>flex-grow</code> property has no effect.</p>
+  </section>
+  
+  <section class="main-section" id="flex-basis">
+    <header>flex-basis</header>
+            <p>The <code>flex-basis</code> property specifies the initial length of a flexible item.</p>
+            <p>Here's how you set the initial length of the second flex-item to 100 pixels:</p>
+            <div class="code-container">
+               <p>div:nth-of-type(2) {</p>
+               <div class="code-indent">
+                  <p>flex-basis: 100px;</p>
+               </div>
+               <p>}</p>
+            </div>
+            <p><strong>Note: </strong>If the element is not a flexible item, the <code>flex-basis</code> property has no effect.</p>
+  </section>
+  
+  <section class="main-section" id="flex-order">
+    <header>flex-order</header>
+            <p>The <code>order</code> property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.</p>
+            <p>The following code sets the order of the flexible items:</p>
+            <div class="code-container">
+              <p>div#myRedDIV {order: 2;}</p>
+              <p>div#myBlueDIV {order: 4;}</p>
+              <p>div#myGreenDIV {order: 3;}</p>
+              <p>div#myPinkDIV {order: 1;}</p>
+            </div>
+            <p><strong>Note: </strong>If the element is not a flexible item, the <code>order</code> property has no effect.</p>
+  </section>
+  
+  <section class="main-section" id="align-self">
+    <header>align-self</header>
+            <p>The <code>align-self</code> property overrides the flexible container's <code>align-items</code> property.</p>
+            <p>Center the alignments for one of the items inside a flexible element:</p>
+            <div class="code-container">
+              <p>#myBlueDiv {</p>
+              <div class="code-indent">
+                <p>align-self: center;</p>
+              </div>
+              <p>}</p>
+            </div>
+            <p><strong>Note: </strong>The <code>align-self</code> property overrides the flexible container's <code>align-items</code> property.</p>
+  </section>
+  
+  <section class="main-section" id="References">
+    <header>References</header>
+  <p>Thanks to <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp.org</a> and <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">w3schools.com</a> for providing the documentation on this page.</p>
+  </section>
+</main>
+  
+</body>
+</html>
